@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.with-comma > *:not(:last-child)::after {
+  content: ", ";
+  margin-right: 0.25em; /* Adjust spacing as needed */
+}
