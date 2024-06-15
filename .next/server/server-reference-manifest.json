@@ -1,5 +1,22 @@
 {
-  "node": {},
+  "node": {
+    "16cf2f0976c6649d103d2acb736b6954450f8052": {
+      "workers": {
+        "app/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CUsers%5C%5CAsus%5C%5CDesktop%5C%5CInterviewNext%5C%5Cpokemon%5C%5Capp%5C%5Cactions%5C%5CgetPokemon.ts%22%2C%5B%22getPokemon%22%2C%22fetchPokemon%22%5D%5D%5D&__client_imported__=!"
+      },
+      "layer": {
+        "app/page": "rsc"
+      }
+    },
+    "bc6058530e3818d6d988b3c37e43c2a40784b2ef": {
+      "workers": {
+        "app/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CUsers%5C%5CAsus%5C%5CDesktop%5C%5CInterviewNext%5C%5Cpokemon%5C%5Capp%5C%5Cactions%5C%5CgetPokemon.ts%22%2C%5B%22getPokemon%22%2C%22fetchPokemon%22%5D%5D%5D&__client_imported__=!"
+      },
+      "layer": {
+        "app/page": "rsc"
+      }
+    }
+  },
   "edge": {},
-  "encryptionKey": "C9cU7wuqaFiWo2sueo51AWEVXG6PgCckXxoQZ7LqR9U="
+  "encryptionKey": "1gyakvNImwNvIDhhb3j+oyqhV1TL1cboT7IhVeOncWM="
 }

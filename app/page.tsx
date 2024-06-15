@@ -22,7 +22,7 @@ const Page = async ({
 	return (
 		<div className="max-w-[1500px] w-[100%] mx-auto">
 			<Search search={search} types={types?.results}/>
-			<ul key={Math.random()}>
+			<ul>
 				<LoadPokemon search={search} type={type} initialPokemon={pokemon} />
 			</ul>
 		</div>
