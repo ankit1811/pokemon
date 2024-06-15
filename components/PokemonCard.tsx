@@ -1,4 +1,5 @@
 
+import Image from "next/image";
 import Link from "next/link";
 
 export interface Pokemon {
@@ -16,7 +17,9 @@ const PokemonCard: React.FC<Props> = ({ pokemon }) => {
 	return (
 		<div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
 			<div className="flex items-center justify-center">
-				<img
+				<Image
+					width={500}
+					height={500}
 					className="rounded-t-lg max-w-[60%] "
 					src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/${pokemonId}.png`}
 					alt=""
