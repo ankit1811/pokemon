@@ -4,9 +4,10 @@ import { useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
 import { ClipLoader } from "react-spinners";
 import PokemonCard, { Pokemon } from "./PokemonCard";
+import SkeletonLoader from "./SkeletonLoader";
+import NoDataFound from "./NoDataFound";
 
 const LoadPokemon = ({
-  type,
   search,
   initialPokemon,
 }: {
@@ -51,11 +52,20 @@ const LoadPokemon = ({
     }
   }, [inView]);
 
+  useEffect(()=>{
+    setPokemon(initialPokemon)
+  },[initialPokemon])
+
 
 
   return (
     <>
-      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10 lg:pl-14 place-items-center px-5">
+      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10 lg:pl-[3.1rem] place-items-center px-5 md:px-10">
+        {loading && Array(3)
+        .fill(1)
+        .map((card, index) => (
+           <SkeletonLoader />
+        ))}
         {pokemon?.map((poke: Pokemon) => (
           <PokemonCard key={poke.url} pokemon={poke} />
         ))}
@@ -64,10 +74,18 @@ const LoadPokemon = ({
         <div
           className="flex justify-center items-center p-4"
           ref={ref}
-        >
+        > 
           <ClipLoader color="#60e2c9" />
         </div>
       )}
+        {loading &&<div
+          className="flex justify-center items-center p-4"
+        
+        >
+          <ClipLoader color="#60e2c9" />
+        </div>}
+        {!pokemon?.length && !loading && <NoDataFound  message="There is no data available at the moment."/>}
+
     </>
   );
 };

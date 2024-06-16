@@ -37,13 +37,9 @@ export async function fetchPokemon({page = 1, search, type,}: {page?:number; sea
       const pokemonData = await res.json()
       const pokemonList = pokemonData.pokemon.map((item:{pokemon:{name:string;url:string}})=>item.pokemon)
       return pokemonList
-      // console.log(pokemonList,  "above")
     }
     const pokemonData = await getPokemon({query: search, page})
-    // console.log("pokemonData", pokemonData)
     return pokemonData
-
-    
   } catch (error) {
     console.log(error)
     return null
