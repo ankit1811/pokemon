@@ -14,8 +14,8 @@ const PokemonCard: React.FC<Props> = ({ pokemon }) => {
 	const pokemonId = parts[parts.length - 2];
 
 	return (
-		<div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-			<div className="flex items-center justify-center">
+		<div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 w-[100%] h-[100%]">
+			<div className="flex items-center justify-center min-h-[200px]">
 				<img
 					className="rounded-t-lg max-w-[60%] "
 					src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/${pokemonId}.png`}

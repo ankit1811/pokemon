@@ -33,11 +33,13 @@ const Search = ({
 	useEffect(() => {
 		if (type) {
 			router.push(`?type=${type}`);
+		}else {
+			router.push("/");
 		}
 	}, [type]);
 
 	return (
-		<div className="flex justify-center flex-col w-[90%] mx-auto max-w-[1500px] pb-10">
+		<div className="flex justify-center flex-col w-[100%] pl-[5%] pr-[5%] mx-auto max-w-[1500px] bg-gray-200" style={{position:"sticky", top:0}}>
 			<select
 				onChange={(e) => setType(e.target.value)}
 				className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 lg:max-w-[30%] md:max-w-[100%]"
